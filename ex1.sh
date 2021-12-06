@@ -36,3 +36,16 @@ do
     echo $MAMMAL
 done
 echo
+
+# Exercise 6:
+read -p "Enter item name: " USER_FILE
+if [ -f ${USER_FILE} ]
+then
+    echo "You provided a file item."
+elif [ -d ${USER_FILE} ]
+then
+    echo "You provided a directory item".
+else
+    echo "Provided item not found."
+fi
+echo
