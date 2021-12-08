@@ -49,3 +49,32 @@ else
     echo "Provided item not found."
 fi
 echo
+
+# Exercise 7:
+if [ -f $1 ]
+then
+    echo "You provided a file item."
+elif [ -d $1 ]
+then
+    echo "You provided a directory item".
+else
+    echo "Provided item not found."
+fi
+echo
+
+# Exercise 8:
+echo
+for PARAM_IN in $@
+do
+    echo ${PARAM_IN}
+    if [ -f ${PARAM_IN} ]
+    then
+        echo "You provided a file item."
+    elif [ -d ${PARAM_IN} ]
+    then
+        echo "You provided a directory item".
+    else
+        echo "Provided item not found."
+    fi
+    echo
+done
