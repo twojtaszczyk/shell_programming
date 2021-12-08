@@ -48,6 +48,7 @@ then
 else
     echo "Provided item not found."
 fi
+ls -l $USER_FILE
 echo
 
 # Exercise 7:
@@ -60,6 +61,7 @@ then
 else
     echo "Provided item not found."
 fi
+ls -l $1
 echo
 
 # Exercise 8:
@@ -76,5 +78,6 @@ do
     else
         echo "Provided item not found."
     fi
+    ls -l $PARAM_IN
     echo
 done
